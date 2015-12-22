@@ -1,7 +1,12 @@
 <RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>MainForm.ui.qml</file>
+    <qresource prefix="/forms">
+        <file>forms/main.qml</file>
+        <file>forms/MainForm.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/connect.png</file>
+    </qresource>
+    <qresource prefix="/scripts">
+        <file>scripts/rest-service.js</file>
     </qresource>
 </RCC>
-
