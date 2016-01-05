@@ -1,7 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Dialogs 1.2
-import "qrc:/controls/CustomTextBox.qml" as CustomTextBox
+//import "qrc:/controls/CustomTextBox.qml" as CustomTextBox
 
 ApplicationWindow {
     visible: true
@@ -10,7 +10,7 @@ ApplicationWindow {
     color: "#9C231A"
     title: "Connect Express Couriers"
 
-    menuBar: MenuBar {
+   /* menuBar: MenuBar {
         Menu {
             title: "File"
             MenuItem {
@@ -23,10 +23,11 @@ ApplicationWindow {
             }
         }
     }
+    */
 
-    CustomTextBox {
-        id: asdfa
-    }
+    //CustomTextBox {
+    //    id: asdfa
+    //}
 
     MainForm {
         anchors.fill: parent

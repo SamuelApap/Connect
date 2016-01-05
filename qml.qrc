@@ -5,6 +5,7 @@
     </qresource>
     <qresource prefix="/images">
         <file>images/connect.png</file>
+        <file>images/Logo.svg</file>
     </qresource>
     <qresource prefix="/scripts">
         <file>scripts/rest-service.js</file>
