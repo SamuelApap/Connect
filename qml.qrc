@@ -1,15 +1,9 @@
 <RCC>
-    <qresource prefix="/views">
+    <qresource prefix="/">
         <file>views/main.qml</file>
         <file>views/MainForm.qml</file>
-    </qresource>
-    <qresource prefix="/images">
+        <file>controls/CustomTextBox.qml</file>
         <file>images/connect.png</file>
-    </qresource>
-    <qresource prefix="/scripts">
         <file>scripts/rest-service.js</file>
-    </qresource>
-    <qresource prefix="/controls">
-        <file>CustomTextBox.qml</file>
     </qresource>
 </RCC>

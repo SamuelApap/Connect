@@ -1,7 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
-import "qrc:/scripts/scripts/rest-service.js" as RestService
+import "qrc:/scripts/" as Scripts
 
 Item {
 
@@ -57,7 +57,7 @@ Item {
                 anchors.right: parent.right
                 text: "Login"
                 onClicked: {
-                    var rest = new RestService.RestService()
+                    var rest = new Scripts.RestService()
                     //rest.post()
                 }
             }
