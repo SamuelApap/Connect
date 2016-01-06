@@ -15,8 +15,8 @@ include(deployment.pri)
 
 DISTFILES += \
 project.properties \
-    controls/CustomTextBox.qml\
-    views/main.qml\
-    views/MainForm.qml\
-    scripts/rest-service.js\
-    images/connect.png\
+    views/main.qml \
+    views/MainForm.qml \
+    controls/CustomTextBox.qml \
+    scripts/rest-service.js \
+    images/Logo.svg \

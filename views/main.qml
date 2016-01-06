@@ -1,11 +1,6 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Dialogs 1.2
-<<<<<<< HEAD
-//import "qrc:/controls/CustomTextBox.qml" as CustomTextBox
-=======
-import "../controls/" as Controls
->>>>>>> origin/master
 
 ApplicationWindow {
     id:mainWindow
@@ -30,12 +25,13 @@ ApplicationWindow {
     }
     */
 
-    Controls.CustomTextBox {
+    /*Controls.CustomTextBox {
         id: asdfa
 
         anchors.centerIn: parent
         placeholder: "hello"
-    }
-
+    }*/
+    MainForm {
+            anchors.fill: parent}
 
 }
