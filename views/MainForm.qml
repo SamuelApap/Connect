@@ -1,7 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
-import "qrc:/scripts/scripts/rest-service.js" as RestService
+import "qrc:/scripts/" as Scripts
 
 Item {
     Column{ anchors.centerIn: parent; spacing: 50;
@@ -22,8 +22,20 @@ Item {
                 TextInput { id: txtPassword; anchors.fill: parent; anchors.margins: 8; anchors.leftMargin: 10; anchors.rightMargin: 10; echoMode: TextInput.Password; }
             }
 
+<<<<<<< HEAD
             Button { id: btnLogin; anchors.left: parent.left; anchors.right: parent.right; anchors.topMargin: 20; text: "Login";
                 onClicked: { var rest = new RestService.RestService(); /*rest.post()*/}
+=======
+            Button {
+                id: btnLogin
+                anchors.left: parent.left
+                anchors.right: parent.right
+                text: "Login"
+                onClicked: {
+                    var rest = new Scripts.RestService()
+                    //rest.post()
+                }
+>>>>>>> origin/master
             }
         }
     }

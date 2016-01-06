@@ -12,3 +12,11 @@ QML_IMPORT_PATH =
 # Default rules for deployment.
 include(deployment.pri)
 
+
+DISTFILES += \
+project.properties \
+    controls/CustomTextBox.qml\
+    views/main.qml\
+    views/MainForm.qml\
+    scripts/rest-service.js\
+    images/connect.png\

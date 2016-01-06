@@ -1,9 +1,14 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Dialogs 1.2
+<<<<<<< HEAD
 //import "qrc:/controls/CustomTextBox.qml" as CustomTextBox
+=======
+import "../controls/" as Controls
+>>>>>>> origin/master
 
 ApplicationWindow {
+    id:mainWindow
     visible: true
     width: 720
     height: 720
@@ -25,17 +30,12 @@ ApplicationWindow {
     }
     */
 
-    //CustomTextBox {
-    //    id: asdfa
-    //}
+    Controls.CustomTextBox {
+        id: asdfa
 
-    MainForm {
-        anchors.fill: parent
-
-        MouseArea {
-            onClicked: {
-                asdfa.hello()
-            }
-        }
+        anchors.centerIn: parent
+        placeholder: "hello"
     }
+
+
 }
