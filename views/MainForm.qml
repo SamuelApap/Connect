@@ -13,16 +13,20 @@ Item {
         //Login Details
         ColumnLayout { anchors.horizontalCenter: parent.horizontalCenter; width: 300; spacing: 10;
             Rectangle { anchors.left: parent.left; anchors.right: parent.right; color: "#FFF"; height: 35;
-                TextInput { id: txtEmail; anchors.fill: parent; anchors.margins: 8; anchors.leftMargin: 10; anchors.rightMargin: 10; echoMode: TextInput.Normal;
-                    font.family: "Segoe UI, Roboto";
-                }
+                TextInput { id: txtEmail; anchors.fill: parent; anchors.leftMargin: 8; anchors.rightMargin: 8; echoMode: TextInput.Normal; verticalAlignment: Text.AlignVCenter;
+                            font.family: "Segoe UI, Roboto"; selectionColor: "Grey"; selectedTextColor: "White"; }
             }
 
             Rectangle { anchors.left: parent.left; anchors.right: parent.right; color: "white"; height: 35;
-                TextInput { id: txtPassword; anchors.fill: parent; anchors.margins: 8; anchors.leftMargin: 10; anchors.rightMargin: 10; echoMode: TextInput.Password; }
+                TextInput { id: txtPassword; anchors.fill: parent; anchors.leftMargin: 8; anchors.rightMargin: 8; echoMode: TextInput.Password;
+                            verticalAlignment: Text.AlignVCenter; }
             }
 
             Button { id: btnLogin; anchors.left: parent.left; anchors.right: parent.right; anchors.topMargin: 20; text: "Login";
+                //style:
+                   // ButtonStyle { background:
+                      // Rectangle { color: "Blue"; }}
+
                 onClicked: { var rest = new RestService.RestService(); /*rest.post()*/}
             }
         }
