@@ -31,7 +31,7 @@ ApplicationWindow {
         anchors.centerIn: parent
         placeholder: "hello"
     }*/
-    MainForm {
+    LoginView {
             anchors.fill: parent}
 
 }
