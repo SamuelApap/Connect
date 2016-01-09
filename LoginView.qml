@@ -14,7 +14,7 @@ Item {
             source: "qrc:///images/Logo.svg"
         }
 
-        TextInput {
+        TextField {
             id: txtEmail
             height: 35
             anchors.left: parent.left
@@ -25,7 +25,7 @@ Item {
             style: Style.textField
         }
 
-        TextInput {
+        TextField {
             id: txtPassword
             height: 35
             anchors.left: parent.left
