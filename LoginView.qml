@@ -1,8 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
-import "qrc:///styles/"
-
+import "qrc:///config/"
 Item {
     ColumnLayout {
         width: 300
@@ -42,7 +41,8 @@ Item {
             text: "Login"
             style: Style.defaultButtonStyle
             onClicked: {
-                //var rest = new RestService()
+                var rest = new RestService.RestService()
+                rest.post();
             }
         }
     }

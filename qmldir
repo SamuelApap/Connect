@@ -1,1 +1,2 @@
-singleton Style 1.0 Styles.qml
+singleton Style 1.0 ../styles/Styles.qml
+RestService 1.0 ../scripts/rest-service.js

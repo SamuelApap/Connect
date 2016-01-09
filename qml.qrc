@@ -7,9 +7,14 @@
     </qresource>
     <qresource prefix="/styles">
         <file>Styles.qml</file>
-        <file>qmldir</file>
     </qresource>
     <qresource prefix="/images">
         <file>Logo.svg</file>
+    </qresource>
+    <qresource prefix="/scripts">
+        <file>rest-service.js</file>
+    </qresource>
+    <qresource prefix="/config">
+        <file>qmldir</file>
     </qresource>
 </RCC>
