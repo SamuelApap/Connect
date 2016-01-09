@@ -1,5 +1,6 @@
 pragma Singleton
 import QtQuick 2.4
+import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 QtObject {
@@ -8,6 +9,7 @@ QtObject {
     property var button: Component {
         ButtonStyle {
             background: Rectangle {
+                implicitHeight: 35
                 color: "#FFFFFF"
                 radius: 3
             }
@@ -17,10 +19,13 @@ QtObject {
     // Default TextField Style
     property var textField: Component {
         TextFieldStyle {
+            font: {
+                family:"Segoe UI, Roboto"
+            }
             background: Rectangle {
+                implicitHeight: 35
                 color: "#FFFFFF"
                 radius: 3
-                height: 60
             }
         }
     }

@@ -2,10 +2,12 @@ import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
 import "qrc:///config/"
+
 Item {
-    ColumnLayout {
+    Column {
         width: 300
         anchors.centerIn: parent
+        spacing: 100
 
         Image {
             fillMode: Image.PreserveAspectFit
@@ -14,39 +16,37 @@ Item {
             source: "qrc:///images/Logo.svg"
         }
 
-        TextField {
-            id: txtEmail
-            height: 35
+        Column {
             anchors.left: parent.left
             anchors.right: parent.right
-            echoMode: TextInput.Normal
-            verticalAlignment: Text.AlignVCenter
-            font.family: "Segoe UI, Roboto"
-            style: Style.textField
-        }
+            spacing: 10
 
-        TextField {
-            id: txtPassword
-            height: 35
-            anchors.left: parent.left
-            anchors.right: parent.right
-            echoMode: TextInput.Password
-            verticalAlignment: Text.AlignVCenter
-            style: Style.textField
-            font.family: "Segoe UI, Roboto"
-        }
+            TextField {
+                id: txtEmail
+                anchors.left: parent.left
+                anchors.right: parent.right
+                echoMode: TextInput.Normal
+                style: Style.textField
+            }
 
-        Button {
-            id: btnLogin
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.topMargin: 20
-            text: "Login"
-            height: 50
-            style: Style.button
-            onClicked: {
-                var rest = new RestService.RestService()
-                rest.post();
+            TextField {
+                id: txtPassword
+                anchors.left: parent.left
+                anchors.right: parent.right
+                echoMode: TextInput.Password
+                style: Style.textField
+            }
+
+            Button {
+                id: btnLogin
+                anchors.left: parent.left
+                anchors.right: parent.right
+                text: "Login"
+                style: Style.button
+                onClicked: {
+                    var rest = new RestService.RestService()
+                    rest.post()
+                }
             }
         }
     }
