@@ -19,9 +19,9 @@ QtObject {
     // Default TextField Style
     property var textField: Component {
         TextFieldStyle {
-            font: {
-                family:"Segoe UI, Roboto"
-            }
+            font.pixelSize: 14
+            font.family:"Segoe UI, Roboto"
+
             background: Rectangle {
                 implicitHeight: 35
                 color: "#FFFFFF"
