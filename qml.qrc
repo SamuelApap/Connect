@@ -1,10 +1,15 @@
 <RCC>
     <qresource prefix="/">
-        <file>views/main.qml</file>
-        <file>controls/CustomTextBox.qml</file>
-        <file>images/Logo.svg</file>
-        <file>scripts/rest-service.js</file>
-        <file>views/LoginView.qml</file>
-        <file>styles/Styles.qml</file>
+        <file>main.qml</file>
+    </qresource>
+    <qresource prefix="/views">
+        <file>LoginView.qml</file>
+    </qresource>
+    <qresource prefix="/styles">
+        <file>Styles.qml</file>
+        <file>qmldir</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>Logo.svg</file>
     </qresource>
 </RCC>
