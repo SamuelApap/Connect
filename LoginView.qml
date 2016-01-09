@@ -14,7 +14,7 @@ Item {
             source: "qrc:///images/Logo.svg"
         }
 
-        TextField {
+        TextInput {
             id: txtEmail
             height: 35
             anchors.left: parent.left
@@ -22,15 +22,18 @@ Item {
             echoMode: TextInput.Normal
             verticalAlignment: Text.AlignVCenter
             font.family: "Segoe UI, Roboto"
+            style: Style.textField
         }
 
-        TextField {
+        TextInput {
             id: txtPassword
             height: 35
             anchors.left: parent.left
             anchors.right: parent.right
             echoMode: TextInput.Password
             verticalAlignment: Text.AlignVCenter
+            style: Style.textField
+            font.family: "Segoe UI, Roboto"
         }
 
         Button {
@@ -39,7 +42,8 @@ Item {
             anchors.right: parent.right
             anchors.topMargin: 20
             text: "Login"
-            style: Style.defaultButtonStyle
+            height: 50
+            style: Style.button
             onClicked: {
                 var rest = new RestService.RestService()
                 rest.post();
