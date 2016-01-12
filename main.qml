@@ -1,6 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Dialogs 1.2
+import "qrc:///config/"
 
 ApplicationWindow {
     id:mainWindow
@@ -17,6 +18,13 @@ ApplicationWindow {
     Loader{
         id:loader
         anchors.fill: parent
-        source: "qrc:///views/LoginView.qml"
+        source: AppConfig.instance.navigation.loginView
+    }
+
+    Component.onCompleted: {
+       NavigationService.subscribe(function(url){
+           console.log(url)
+           navigate(url)
+       })
     }
 }

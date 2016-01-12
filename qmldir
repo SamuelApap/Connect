@@ -1,2 +1,4 @@
 singleton Style 1.0 ../styles/Styles.qml
+AppConfig 1.0 config.js
 RestService 1.0 ../scripts/rest-service.js
+NavigationService 1.0 ../scripts/navigation-service.js

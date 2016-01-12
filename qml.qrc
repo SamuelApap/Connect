@@ -4,6 +4,7 @@
     </qresource>
     <qresource prefix="/views">
         <file>LoginView.qml</file>
+        <file>PackagesView.qml</file>
     </qresource>
     <qresource prefix="/styles">
         <file>Styles.qml</file>
@@ -13,8 +14,10 @@
     </qresource>
     <qresource prefix="/scripts">
         <file>rest-service.js</file>
+        <file>navigation-service.js</file>
     </qresource>
     <qresource prefix="/config">
         <file>qmldir</file>
+        <file>config.js</file>
     </qresource>
 </RCC>
