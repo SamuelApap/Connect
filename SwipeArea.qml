@@ -9,7 +9,12 @@ MouseArea {
     property int flickDifference
     property bool gestureStarted: false
     property var gestureStartTime
-    anchors.fill: parent
+
+    function navigateToIndex(idx) {
+        elementToHandle.x = idx * flickDifference * -1
+        elementToHandle.selectedIndex = idx
+        oldX = elementToHandle.x
+    }
 
     onReleased: {
         var xMoved = oldX
@@ -30,6 +35,8 @@ MouseArea {
         oldX = xMoved
         elementToHandle.x = xMoved
         gestureStarted = false
+        var index = oldX == 0 ? 0 : (oldX / flickDifference) * -1
+        elementToHandle.selectedIndex = index
     }
 
     onPressed: {
