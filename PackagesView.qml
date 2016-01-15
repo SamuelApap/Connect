@@ -14,7 +14,6 @@ Item {
         //Header
         Rectangle {
             anchors {
-                top: parent.top
                 right: parent.right
                 left: parent.left
             }
@@ -87,15 +86,21 @@ Item {
         TabView {
             Tab {
                 title: "Packages"
-                Rectangle { color: "red" }
+                Rectangle {
+                    color: "red"
+                }
             }
             Tab {
                 title: "Couriers"
-                Rectangle { color: "blue" }
+                Rectangle {
+                    color: "blue"
+                }
             }
             Tab {
                 title: "Messages"
-                Rectangle { color: "green" }
+                Rectangle {
+                    color: "green"
+                }
             }
         }
     }
