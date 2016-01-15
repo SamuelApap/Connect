@@ -22,4 +22,8 @@
         <file>qmldir</file>
         <file>config.js</file>
     </qresource>
+    <qresource prefix="/controls">
+        <file>SwipeTabView.qml</file>
+        <file>SwipeArea.qml</file>
+    </qresource>
 </RCC>
