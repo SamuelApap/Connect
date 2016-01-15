@@ -11,6 +11,8 @@
     </qresource>
     <qresource prefix="/images">
         <file>Logo.svg</file>
+        <file>Icon-Bell.svg</file>
+        <file>Icon-Search.svg</file>
     </qresource>
     <qresource prefix="/scripts">
         <file>rest-service.js</file>
