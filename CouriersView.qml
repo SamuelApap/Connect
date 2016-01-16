@@ -15,7 +15,7 @@ Item {
             height: 80
             color: "#FFF"
 
-            Grid {
+            Row {
                 anchors.fill: parent
                 anchors.margins: 5
                 spacing: 5
@@ -28,8 +28,6 @@ Item {
                 }
 
                 Column {
-                    anchors.left: parent.left
-                    anchors.leftMargin: 75
                     spacing: 1
 
                     Text {
