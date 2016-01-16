@@ -5,6 +5,12 @@ Rectangle {
     id: root
     focus: true
     color: "#f5f5f5"
+
+    FontLoader{
+        id:roboto
+        source: "qrc:///fonts/roboto.ttf"
+    }
+
     property list<QtObject> itmes: [
         QtObject {
             property string tabName: "Packages"
@@ -78,7 +84,7 @@ Rectangle {
                         horizontalAlignment:  Text.AlignHCenter
                         color: "#FFF"
                         font.bold: true
-                        font.family: "Segoe UI, Roboto"
+                        font.family: roboto.name
                     }
                     Rectangle {
                         anchors.bottom: parent.bottom
@@ -98,6 +104,16 @@ Rectangle {
                 }
             }
         }
+    }
+
+    SwipeArea {
+        anchors.top: menu.bottom
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        id: swipeArea
+        elementToHandle: tabs
+        flickDifference: root.width
     }
 
     Row {
@@ -124,13 +140,4 @@ Rectangle {
         }
     }
 
-    SwipeArea {
-        anchors.top: menu.bottom
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        id: swipeArea
-        elementToHandle: tabs
-        flickDifference: root.width
-    }
 }

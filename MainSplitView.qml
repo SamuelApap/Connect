@@ -6,6 +6,11 @@ import connect.localStorage 1.0
 import "qrc:///config/"
 
 Item {
+    FontLoader{
+        id:yrikari
+        source: "qrc:///fonts/yukarimobil.ttf"
+    }
+
     //Header
     Rectangle {
         id: header
@@ -25,7 +30,7 @@ Item {
             color: "#FFFFFF"
             anchors.topMargin: 5
             anchors.leftMargin: 10
-            font.family: "Yukarimobile"
+            font.family: yrikari.name
             font.pointSize: 22
         }
 

@@ -32,4 +32,8 @@
         <file>SwipeTabView.qml</file>
         <file>SwipeArea.qml</file>
     </qresource>
+    <qresource prefix="/fonts">
+        <file>yukarimobil.ttf</file>
+        <file>roboto.ttf</file>
+    </qresource>
 </RCC>

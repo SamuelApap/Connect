@@ -3,6 +3,11 @@ import QtQuick.Controls 1.4
 
 Item {
 
+    FontLoader{
+        id:roboto
+        source: "qrc:///fonts/roboto.ttf"
+    }
+
     ListView {
         anchors.fill: parent
         anchors.topMargin: 7
@@ -57,19 +62,19 @@ Item {
                     Text {
                         text: qsTr("Package ID: #00001")
                         font.pointSize: 9
-                        font.family: "Segoe UI, Roboto"
+                        font.family: roboto.name
                         color: "#696969"
                     }
                     Text {
                         text: qsTr("Name: Christian Vella")
                         font.pointSize: 9
-                        font.family: "Segoe UI, Roboto"
+                        font.family: roboto.name
                         color: "#696969"
                     }
                     Text {
                         text: qsTr("Telephone: +356 799201052")
                         font.pointSize: 9
-                        font.family: "Segoe UI, Roboto"
+                        font.family: roboto.name
                         color: "#696969"
                     }
                 }
@@ -134,7 +139,7 @@ Item {
                 Text {
                     text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
                     font.pointSize: 9
-                    font.family: "Segoe UI, Roboto"
+                    font.family: roboto.name
                     color: "#696969"
                 }
             }

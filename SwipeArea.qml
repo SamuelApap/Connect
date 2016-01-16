@@ -50,9 +50,6 @@ MouseArea {
         elementToHandle.x = oldX - (startX - mouseX)
     }
 
-    onMouseYChanged: {
-        mouse.accepted = false
-    }
 
     function isFlick(xPosDiff) {
         var now = new Date()
