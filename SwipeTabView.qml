@@ -32,6 +32,9 @@ Rectangle {
                 Rectangle {
                     anchors.fill: parent
                     color: "#f5f5f5"
+                    CouriersView {
+                        anchors.fill: parent
+                    }
                 }
             }
         },
