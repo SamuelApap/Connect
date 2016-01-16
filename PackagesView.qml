@@ -13,11 +13,8 @@ Item {
         anchors.topMargin: 7
         anchors.leftMargin: 7
         anchors.rightMargin: 7
-
         clip: true
-
         model: 20
-
         delegate: packageDelegate
         spacing: 7
     }
@@ -38,7 +35,7 @@ Item {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.margins: 5
-                height:55
+                height: 55
 
                 Rectangle {
                     id: packageImage
@@ -57,23 +54,23 @@ Item {
                 Column {
                     anchors.left: packageImage.right
                     anchors.leftMargin: 5
-                    spacing: 1
+                    spacing: 3
 
                     Text {
                         text: qsTr("Package ID: #00001")
-                        font.pointSize: 9
+                        font.pixelSize: 14
                         font.family: roboto.name
                         color: "#696969"
                     }
                     Text {
                         text: qsTr("Name: Christian Vella")
-                        font.pointSize: 9
+                        font.pixelSize: 14
                         font.family: roboto.name
                         color: "#696969"
                     }
                     Text {
                         text: qsTr("Telephone: +356 799201052")
-                        font.pointSize: 9
+                        font.pixelSize: 14
                         font.family: roboto.name
                         color: "#696969"
                     }
@@ -120,6 +117,7 @@ Item {
                     }
                 }
             }
+
             //Address
             Row {
                 anchors.top: topRow.bottom
@@ -137,8 +135,8 @@ Item {
                 }
 
                 Text {
-                    text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
-                    font.pointSize: 9
+                    text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Rabat, Gozo")
+                    font.pixelSize: 14
                     font.family: roboto.name
                     color: "#696969"
                 }

@@ -31,7 +31,7 @@ Item {
             anchors.topMargin: 5
             anchors.leftMargin: 10
             font.family: yrikari.name
-            font.pointSize: 22
+            font.pixelSize: 28
         }
 
         //Actions

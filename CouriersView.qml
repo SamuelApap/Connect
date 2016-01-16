@@ -1,24 +1,36 @@
 import QtQuick 2.0
 
 Item {
-    Column {
+
+    FontLoader {
+        id: roboto
+        source: "qrc:///fonts/roboto.ttf"
+    }
+
+    ListView {
         anchors.fill: parent
         anchors.topMargin: 7
         anchors.leftMargin: 7
         anchors.rightMargin: 7
+        clip: true
+        model: 20
+        delegate: courierDelegate
         spacing: 7
+    }
 
-        //Courier
+    //Courier
+    Component {
+        id: courierDelegate
+
         Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             height: 80
             color: "#FFF"
 
-            Grid {
+            Item {
                 anchors.fill: parent
                 anchors.margins: 5
-                spacing: 5
 
                 Image {
                     width: 70
@@ -34,20 +46,20 @@ Item {
 
                     Text {
                         text: qsTr("Christian Vella")
-                        font.pointSize: 16
-                        font.family: "Segoe UI, Roboto"
+                        font.pixelSize: 22
+                        font.family: roboto.name
                         color: "#9C231A"
                     }
                     Text {
                         text: qsTr("Packages: 17/23")
-                        font.pointSize: 10
-                        font.family: "Segoe UI, Roboto"
+                        font.pixelSize: 14
+                        font.family: roboto.name
                         color: "#696969"
                     }
                     Text {
                         text: qsTr("Locaiton: St. Pauls Bay, Malta")
-                        font.pointSize: 10
-                        font.family: "Segoe UI, Roboto"
+                        font.pixelSize: 14
+                        font.family: roboto.name
                         color: "#696969"
                     }
                 }

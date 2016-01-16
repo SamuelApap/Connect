@@ -74,7 +74,7 @@ Rectangle {
                         id:tabImage
                         anchors.top: parent.top
                         anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.topMargin: 8
+                        anchors.topMargin: 4
                         height: 40
                         fillMode: Image.PreserveAspectFit
                         source: root.itmes[index].tabImage
@@ -82,11 +82,11 @@ Rectangle {
                     Text {
                         anchors.top: tabImage.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
-
                         text: root.itmes[index].tabName
                         horizontalAlignment:  Text.AlignHCenter
                         color: "#FFF"
                         font.bold: true
+                        font.pixelSize: 18
                         font.family: roboto.name
                     }
                     Rectangle {
