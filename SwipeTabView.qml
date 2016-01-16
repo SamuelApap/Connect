@@ -57,11 +57,12 @@ Rectangle {
                 width: root.width / root.itmes.length
                 color: "#9C231A"
 
-                Grid {
+                Item {
                     anchors.fill: parent
                     opacity: tabs.selectedIndex == index ? 1 : 0.7
 
                     Image {
+                        id:tabImage
                         anchors.top: parent.top
                         anchors.horizontalCenter: parent.horizontalCenter
                         anchors.topMargin: 8
@@ -70,9 +71,9 @@ Rectangle {
                         source: root.itmes[index].tabImage
                     }
                     Text {
-                        anchors.top: parent.top
+                        anchors.top: tabImage.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.topMargin: 44
+
                         text: root.itmes[index].tabName
                         horizontalAlignment:  Text.AlignHCenter
                         color: "#FFF"

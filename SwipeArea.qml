@@ -9,6 +9,7 @@ MouseArea {
     property int flickDifference
     property bool gestureStarted: false
     property var gestureStartTime
+    preventStealing: true
 
     function navigateToIndex(idx) {
         elementToHandle.x = idx * flickDifference * -1
@@ -47,6 +48,10 @@ MouseArea {
 
     onMouseXChanged: {
         elementToHandle.x = oldX - (startX - mouseX)
+    }
+
+    onMouseYChanged: {
+        mouse.accepted = false
     }
 
     function isFlick(xPosDiff) {
