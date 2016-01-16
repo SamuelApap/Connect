@@ -4,6 +4,7 @@
     </qresource>
     <qresource prefix="/views">
         <file>LoginView.qml</file>
+        <file>MainSplitView.qml</file>
         <file>PackagesView.qml</file>
     </qresource>
     <qresource prefix="/styles">
@@ -13,6 +14,11 @@
         <file>Logo.svg</file>
         <file>Icon-Bell.svg</file>
         <file>Icon-Search.svg</file>
+        <file>Icon-Chat.svg</file>
+        <file>Icon-Package.svg</file>
+        <file>Icon-Truck.svg</file>
+        <file>Icon-Users.svg</file>
+        <file>Icon-Pin.svg</file>
     </qresource>
     <qresource prefix="/scripts">
         <file>rest-service.js</file>

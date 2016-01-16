@@ -23,7 +23,7 @@ ApplicationWindow {
     Loader{
         id:loader
         anchors.fill: parent
-        source: AppConfig.instance.navigation.packagesView
+        source: AppConfig.instance.navigation.mainSplitView
     }
 
     Component.onCompleted: {        
@@ -32,9 +32,9 @@ ApplicationWindow {
            navigate(url)
        })
 
-       // if the user is allready logged in redirect to PackagesView
+       // if the user is allready logged in redirect to MainSplitView
         var user = localStorage.get(AppConfig.instance.storage.token)
         if(user && user.access_token)
-            navigate(AppConfig.instance.navigation.packagesView)
+            navigate(AppConfig.instance.navigation.mainSplitView)
     }
 }

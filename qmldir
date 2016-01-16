@@ -4,3 +4,4 @@ SwipeArea 1.0 ../controls/SwipeArea.qml
 AppConfig 1.0 config.js
 RestService 1.0 ../scripts/rest-service.js
 NavigationService 1.0 ../scripts/navigation-service.js
+PackagesView 1.0 ../views/PackagesView.qml

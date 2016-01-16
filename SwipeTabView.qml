@@ -1,37 +1,45 @@
 import QtQuick 2.0
+import "qrc:///config/"
 
 Rectangle {
     id: root
     focus: true
+    color: "#f5f5f5"
     property list<QtObject> itmes: [
-                                       QtObject {
-                                           property string tabName: "tab1"
-                                           property var component:  Component {
-                                                                       Rectangle {
-                                                                           anchors.fill: parent
-                                                                           color: "red"
-                                                                       }
-                                                                   }
-                                       },
-                                        QtObject {
-                                            property string tabName: "tab2"
-                                            property var component:  Component {
-                                                                        Rectangle {
-                                                                            anchors.fill: parent
-                                                                            color: "blue"
-                                                                        }
-                                                                    }
-                                        },
-                                        QtObject {
-                                            property string tabName: "tab3"
-                                            property var component:  Component {
-                                                                        Rectangle {
-                                                                            anchors.fill: parent
-                                                                            color: "yellow"
-                                                                        }
-                                                                    }
-                                        }
-                                   ]
+        QtObject {
+            property string tabName: "Packages"
+            property string tabImage: "qrc:///images/Icon-Package.svg"
+            property var component: Component {
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#f5f5f5"
+                    PackagesView {
+                        anchors.fill: parent
+                    }
+                }
+            }
+        },
+        QtObject {
+            property string tabName: "Couriers"
+            property string tabImage: "qrc:///images/Icon-Users.svg"
+            property var component: Component {
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#f5f5f5"
+                }
+            }
+        },
+        QtObject {
+            property string tabName: "Messags"
+            property string tabImage: "qrc:///images/Icon-Chat.svg"
+            property var component: Component {
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#f5f5f5"
+                }
+            }
+        }
+    ]
 
     Grid {
         id: menu
@@ -47,19 +55,44 @@ Rectangle {
             delegate: Rectangle {
                 height: menu.height
                 width: root.width / root.itmes.length
-                color: tabs.selectedIndex == index?"green":"blue"
-                border.color: "black"
-                border.width: 2
-                Text {
-                    anchors.centerIn: parent
-                    text: root.itmes[index].tabName
+                color: "#9C231A"
 
+                Grid {
+                    anchors.fill: parent
+                    opacity: tabs.selectedIndex == index ? 1 : 0.7
+
+                    Image {
+                        anchors.top: parent.top
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.topMargin: 8
+                        height: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: root.itmes[index].tabImage
+                    }
+                    Text {
+                        anchors.top: parent.top
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.topMargin: 44
+                        text: root.itmes[index].tabName
+                        horizontalAlignment:  Text.AlignHCenter
+                        color: "#FFF"
+                        font.bold: true
+                        font.family: "Segoe UI, Roboto"
+                    }
+                    Rectangle {
+                        anchors.bottom: parent.bottom
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: 100
+                        height: 5
+                        color: "#FFF"
+                        opacity: tabs.selectedIndex == index ? 1 : 0
+                    }
                 }
 
-                MouseArea{
+                MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        swipeArea.navigateToIndex(index);
+                        swipeArea.navigateToIndex(index)
                     }
                 }
             }
@@ -73,7 +106,7 @@ Rectangle {
         property int selectedIndex: 0
         Behavior on x {
             NumberAnimation {
-                duration: 150
+                duration: 250
             }
         }
         Repeater {
@@ -95,7 +128,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        id:swipeArea
+        id: swipeArea
         elementToHandle: tabs
         flickDifference: root.width
     }

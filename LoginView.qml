@@ -61,7 +61,7 @@ Item {
                                   },
                                   onSuccess: function (x) {
                                       localStorage.set(AppConfig.instance.storage.token,x);
-                                      NavigationService.navigate(AppConfig.instance.navigation.packagesView);
+                                      NavigationService.navigate(AppConfig.instance.navigation.mainSplitView);
                                   },
                                   onError: function (x) {
                                   }

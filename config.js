@@ -5,7 +5,7 @@ var instance = {
 
     navigation: {
         loginView:"qrc:///views/LoginView.qml",
-        packagesView:"qrc:///views/PackagesView.qml"
+        mainSplitView:"qrc:///views/MainSplitView.qml"
     },
 
     api: {

@@ -1,89 +1,712 @@
-import QtQuick 2.5
+import QtQuick 2.0
 import QtQuick.Controls 1.4
-import QtQuick.Layouts 1.2
-
-import connect.localStorage 1.0
-import "qrc:///config/"
 
 Item {
-    //Header
-    Rectangle {
-        id: header
-        anchors {
-            top: parent.top
-            right: parent.right
-            left: parent.left
-        }
-        height: 50
-        color: "transparent"
+    Column {
+        anchors.fill: parent
+        anchors.topMargin: 7
+        anchors.leftMargin: 7
+        anchors.rightMargin: 7
+        spacing: 7
 
-        //Title
-        Text {
-            anchors.top: parent.top
+        //Package
+        Rectangle {
             anchors.left: parent.left
-            text: qsTr("Connect Express Couriers")
-            color: "#FFFFFF"
-            anchors.topMargin: 5
-            anchors.leftMargin: 10
-            font.family: "Yukarimobile"
-            font.pointSize: 22
-        }
-
-        //Actions
-        Row {
-            anchors.top: parent.top
             anchors.right: parent.right
-            anchors.topMargin: 10
-            anchors.rightMargin: 10
-            spacing: 16
+            height: 80
+            color: "#FFF"
 
-            //Search
-            Image {
-                width: 23
-                height: 23
-                fillMode: Image.PreserveAspectFit
-                source: "qrc:///images/Icon-Search.svg"
-            }
-
-            //Notifications
-            Image {
-                width: 23
-                height: 23
-                fillMode: Image.PreserveAspectFit
-                source: "qrc:///images/Icon-Bell.svg"
-            }
-
-            //Menu
-            Column {
-                spacing: 3
+            Grid {
+                anchors.fill: parent
+                anchors.margins: 5
+                spacing: 5
 
                 Rectangle {
-                    width: 6
-                    height: 6
-                    color: "#FFFFFF"
-                    radius: width * 0.5
+                    width: 50
+                    height: 50
+                    color: "#9C231A"
+
+                    Image {
+                        anchors.centerIn: parent
+                        height: 24
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Package.svg"
+                    }
                 }
-                Rectangle {
-                    width: 6
-                    height: 6
-                    color: "#FFFFFF"
-                    radius: width * 0.5
+
+                Column {
+                    anchors.left: parent.left
+                    anchors.leftMargin: 55
+                    spacing: 1
+
+                    Text {
+                        text: qsTr("Package ID: #00001")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Name: Christian Vella")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Telephone: +356 799201052")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
                 }
+
+                //Address
+                Grid {
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 15
+
+                    Image {
+                        anchors.left: parent.left
+                        width: 10
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Pin.svg"
+                    }
+
+                    Text {
+                        anchors.left: parent.left
+                        anchors.leftMargin: 13
+                        text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
                 Rectangle {
-                    width: 6
-                    height: 6
-                    color: "#FFFFFF"
-                    radius: width * 0.5
+                    width: 55
+                    height: 70
+                    color: "#00000000"
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
+
+                    Image {
+                        anchors.centerIn: parent
+                        width: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Truck.svg"
+                    }
+                }
+
+                //Menu
+                Column {
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+                    spacing: 2
+
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
                 }
             }
         }
-    }
 
-    //Tabs
-    SwipeTabView {
-        anchors.top: header.bottom
-        anchors.bottom: parent.bottom
-        anchors.right: parent.right
-        anchors.left: parent.left
+
+        //Package
+        Rectangle {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 80
+            color: "#FFF"
+
+            Grid {
+                anchors.fill: parent
+                anchors.margins: 5
+                spacing: 5
+
+                Rectangle {
+                    width: 50
+                    height: 50
+                    color: "#9C231A"
+
+                    Image {
+                        anchors.centerIn: parent
+                        height: 24
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Package.svg"
+                    }
+                }
+
+                Column {
+                    anchors.left: parent.left
+                    anchors.leftMargin: 55
+                    spacing: 1
+
+                    Text {
+                        text: qsTr("Package ID: #00001")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Name: Christian Vella")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Telephone: +356 799201052")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                //Address
+                Grid {
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 15
+
+                    Image {
+                        anchors.left: parent.left
+                        width: 10
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Pin.svg"
+                    }
+
+                    Text {
+                        anchors.left: parent.left
+                        anchors.leftMargin: 13
+                        text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                Rectangle {
+                    width: 55
+                    height: 70
+                    color: "#00000000"
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
+
+                    Image {
+                        anchors.centerIn: parent
+                        width: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Truck.svg"
+                    }
+                }
+
+                //Menu
+                Column {
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+                    spacing: 2
+
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                }
+            }
+        }
+
+
+
+        //Package
+        Rectangle {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 80
+            color: "#FFF"
+
+            Grid {
+                anchors.fill: parent
+                anchors.margins: 5
+                spacing: 5
+
+                Rectangle {
+                    width: 50
+                    height: 50
+                    color: "#9C231A"
+
+                    Image {
+                        anchors.centerIn: parent
+                        height: 24
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Package.svg"
+                    }
+                }
+
+                Column {
+                    anchors.left: parent.left
+                    anchors.leftMargin: 55
+                    spacing: 1
+
+                    Text {
+                        text: qsTr("Package ID: #00001")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Name: Christian Vella")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Telephone: +356 799201052")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                //Address
+                Grid {
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 15
+
+                    Image {
+                        anchors.left: parent.left
+                        width: 10
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Pin.svg"
+                    }
+
+                    Text {
+                        anchors.left: parent.left
+                        anchors.leftMargin: 13
+                        text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                Rectangle {
+                    width: 55
+                    height: 70
+                    color: "#00000000"
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
+
+                    Image {
+                        anchors.centerIn: parent
+                        width: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Truck.svg"
+                    }
+                }
+
+                //Menu
+                Column {
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+                    spacing: 2
+
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                }
+            }
+        }
+
+
+
+        //Package
+        Rectangle {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 80
+            color: "#FFF"
+
+            Grid {
+                anchors.fill: parent
+                anchors.margins: 5
+                spacing: 5
+
+                Rectangle {
+                    width: 50
+                    height: 50
+                    color: "#9C231A"
+
+                    Image {
+                        anchors.centerIn: parent
+                        height: 24
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Package.svg"
+                    }
+                }
+
+                Column {
+                    anchors.left: parent.left
+                    anchors.leftMargin: 55
+                    spacing: 1
+
+                    Text {
+                        text: qsTr("Package ID: #00001")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Name: Christian Vella")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Telephone: +356 799201052")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                //Address
+                Grid {
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 15
+
+                    Image {
+                        anchors.left: parent.left
+                        width: 10
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Pin.svg"
+                    }
+
+                    Text {
+                        anchors.left: parent.left
+                        anchors.leftMargin: 13
+                        text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                Rectangle {
+                    width: 55
+                    height: 70
+                    color: "#00000000"
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
+
+                    Image {
+                        anchors.centerIn: parent
+                        width: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Truck.svg"
+                    }
+                }
+
+                //Menu
+                Column {
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+                    spacing: 2
+
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                }
+            }
+        }
+
+
+
+        //Package
+        Rectangle {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 80
+            color: "#FFF"
+
+            Grid {
+                anchors.fill: parent
+                anchors.margins: 5
+                spacing: 5
+
+                Rectangle {
+                    width: 50
+                    height: 50
+                    color: "#9C231A"
+
+                    Image {
+                        anchors.centerIn: parent
+                        height: 24
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Package.svg"
+                    }
+                }
+
+                Column {
+                    anchors.left: parent.left
+                    anchors.leftMargin: 55
+                    spacing: 1
+
+                    Text {
+                        text: qsTr("Package ID: #00001")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Name: Christian Vella")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Telephone: +356 799201052")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                //Address
+                Grid {
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 15
+
+                    Image {
+                        anchors.left: parent.left
+                        width: 10
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Pin.svg"
+                    }
+
+                    Text {
+                        anchors.left: parent.left
+                        anchors.leftMargin: 13
+                        text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                Rectangle {
+                    width: 55
+                    height: 70
+                    color: "#00000000"
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
+
+                    Image {
+                        anchors.centerIn: parent
+                        width: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Truck.svg"
+                    }
+                }
+
+                //Menu
+                Column {
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+                    spacing: 2
+
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                }
+            }
+        }
+
+
+
+        //Package
+        Rectangle {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 80
+            color: "#FFF"
+
+            Grid {
+                anchors.fill: parent
+                anchors.margins: 5
+                spacing: 5
+
+                Rectangle {
+                    width: 50
+                    height: 50
+                    color: "#9C231A"
+
+                    Image {
+                        anchors.centerIn: parent
+                        height: 24
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Package.svg"
+                    }
+                }
+
+                Column {
+                    anchors.left: parent.left
+                    anchors.leftMargin: 55
+                    spacing: 1
+
+                    Text {
+                        text: qsTr("Package ID: #00001")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Name: Christian Vella")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                    Text {
+                        text: qsTr("Telephone: +356 799201052")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                //Address
+                Grid {
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: 15
+
+                    Image {
+                        anchors.left: parent.left
+                        width: 10
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Pin.svg"
+                    }
+
+                    Text {
+                        anchors.left: parent.left
+                        anchors.leftMargin: 13
+                        text: qsTr("Address: 21 St. Mary, Ir-Republica Street, Raabat, Gozo")
+                        font.pointSize: 9
+                        font.family: "Segoe UI, Roboto"
+                        color: "#696969"
+                    }
+                }
+
+                Rectangle {
+                    width: 55
+                    height: 70
+                    color: "#00000000"
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
+
+                    Image {
+                        anchors.centerIn: parent
+                        width: 40
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:///images/Icon-Truck.svg"
+                    }
+                }
+
+                //Menu
+                Column {
+                    anchors.top: parent.top
+                    anchors.right: parent.right
+                    spacing: 2
+
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                    Rectangle {
+                        width: 4
+                        height: 4
+                        color: "#dedede"
+                        radius: width * 0.5
+                    }
+                }
+            }
+        }
+
     }
 }
