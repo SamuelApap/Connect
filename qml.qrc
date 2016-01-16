@@ -6,6 +6,7 @@
         <file>LoginView.qml</file>
         <file>MainSplitView.qml</file>
         <file>PackagesView.qml</file>
+        <file>CouriersView.qml</file>
     </qresource>
     <qresource prefix="/styles">
         <file>Styles.qml</file>
@@ -19,6 +20,11 @@
         <file>Icon-Truck.svg</file>
         <file>Icon-Users.svg</file>
         <file>Icon-Pin.svg</file>
+        <file>Icon-Phone.svg</file>
+        <file>Avatar-1.png</file>
+        <file>Avatar-2.png</file>
+        <file>Avatar-3.png</file>
+        <file>Avatar-4.png</file>
     </qresource>
     <qresource prefix="/scripts">
         <file>rest-service.js</file>
@@ -31,5 +37,8 @@
     <qresource prefix="/controls">
         <file>SwipeTabView.qml</file>
         <file>SwipeArea.qml</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>yukarimobil.ttf</file>
     </qresource>
 </RCC>
