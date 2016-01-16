@@ -28,15 +28,12 @@ Item {
             height: 80
             color: "#FFF"
 
-<<<<<<< HEAD
             Item {
-=======
-            Row {
->>>>>>> origin/master
                 anchors.fill: parent
                 anchors.margins: 5
 
                 Image {
+                    id: imgPhoto
                     width: 70
                     height: 70
                     fillMode: Image.PreserveAspectFit
@@ -44,6 +41,8 @@ Item {
                 }
 
                 Column {
+                    anchors.left: imgPhoto.right
+                    anchors.leftMargin: 5
                     spacing: 1
 
                     Text {
