@@ -28,7 +28,11 @@ Item {
             height: 80
             color: "#FFF"
 
+<<<<<<< HEAD
             Item {
+=======
+            Row {
+>>>>>>> origin/master
                 anchors.fill: parent
                 anchors.margins: 5
 
@@ -40,8 +44,6 @@ Item {
                 }
 
                 Column {
-                    anchors.left: parent.left
-                    anchors.leftMargin: 75
                     spacing: 1
 
                     Text {

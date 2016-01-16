@@ -23,7 +23,7 @@ ApplicationWindow {
     Loader{
         id:loader
         anchors.fill: parent
-        source: AppConfig.instance.navigation.mainSplitView
+        source: AppConfig.instance.navigation.loginView
     }
 
     Component.onCompleted: {        
